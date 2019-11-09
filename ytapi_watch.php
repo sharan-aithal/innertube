@@ -91,6 +91,15 @@ function printArray($a) {
 }
 
 function response($array){
+if(($data == NULL) || ($data === NULL))
+	{
+		die(' Invalid data supplied ');
+	}
+	else
+	{
+		if(is_array($data))
+		{
+
 $response = $array[3]['response'];
 
 $response_contents = $response['contents']['twoColumnWatchNextResults'];
@@ -275,6 +284,8 @@ echo '</div><hr>';
 }
 
 return $result;
+}
+}
 }
 
 printArray(response(json_decode($result, true)));
